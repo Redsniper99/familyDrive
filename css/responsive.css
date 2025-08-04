@@ -86,16 +86,6 @@
             width: 100px;
             transition: all 0.4s ease;
         }
-        
-        /* Mobile navbar padding reduction */
-        .navbar {
-            padding: 0 10px !important;
-        }
-        
-        header {
-            padding-top: 3px !important;
-            padding-bottom: 3px !important;
-        }
     }
 
     .our_client {
@@ -777,6 +767,12 @@
     .navbar {
         /*padding-top: 0;*/
         padding: 0 15px !important;
+    }
+    
+    /* Mobile navbar padding reduction */
+    header {
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
     }
 
     .toggle-wrap {
@@ -1648,6 +1644,12 @@
 	/* navbar section */
     .navbar {
         padding: 0 8px !important;
+    }
+    
+    /* Extra small mobile navbar padding */
+    header {
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
     }
 
     .banner_section .banner_text h1 {
