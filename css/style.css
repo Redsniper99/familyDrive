@@ -818,6 +818,13 @@ header.fixed .navbar {
     margin-top: 50px;
 }
 
+.hero_image img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .hero_image::before {
     content: "";
     position: absolute;
