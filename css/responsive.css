@@ -70,23 +70,7 @@
         width: 100%;
     }
 
-    /* Mobile navbar logo scroll effect */
-    @media screen and (max-width: 767px) {
-        .navbar-brand img {
-            width: 100px;
-            transition: all 0.4s ease;
-        }
-        
-        header.fixed .navbar-brand img {
-            width: 70px;
-            transition: all 0.4s ease;
-        }
-        
-        header:not(.fixed) .navbar-brand img {
-            width: 100px;
-            transition: all 0.4s ease;
-        }
-    }
+
 
     .our_client {
         padding: 70px 0;
@@ -773,6 +757,22 @@
     header {
         padding-top: 3px !important;
         padding-bottom: 3px !important;
+    }
+    
+    /* Mobile navbar logo sizing */
+    .navbar-brand img {
+        width: 80px !important;
+        transition: all 0.4s ease;
+    }
+    
+    header.fixed .navbar-brand img {
+        width: 60px !important;
+        transition: all 0.4s ease;
+    }
+    
+    header:not(.fixed) .navbar-brand img {
+        width: 80px !important;
+        transition: all 0.4s ease;
     }
 
     .toggle-wrap {
@@ -1650,6 +1650,22 @@
     header {
         padding-top: 2px !important;
         padding-bottom: 2px !important;
+    }
+    
+    /* Extra small mobile navbar logo sizing */
+    .navbar-brand img {
+        width: 60px !important;
+        transition: all 0.4s ease;
+    }
+    
+    header.fixed .navbar-brand img {
+        width: 45px !important;
+        transition: all 0.4s ease;
+    }
+    
+    header:not(.fixed) .navbar-brand img {
+        width: 60px !important;
+        transition: all 0.4s ease;
     }
 
     .banner_section .banner_text h1 {
