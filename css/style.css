@@ -725,6 +725,12 @@ header.fixed .navbar {
     margin: 0 10px 20px 0;
 }
 
+.banner_section .used_app ul li img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
 .banner_section .used_app ul li:not(:first-child) {
     margin-left: -20px;
 }
@@ -732,6 +738,9 @@ header.fixed .navbar {
 .banner_section .used_app ul li:not(:first-child) img {
     border: 3px solid var(--bg-white);
     border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
 }
 
 .banner_section .used_app p {
