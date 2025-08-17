@@ -205,22 +205,29 @@ $('#about_slider').owlCarousel({
   loop: true,
   margin: 20,
   nav: false,
-  dots: false,
+  dots: true,
   center: true,
   autoplay: true,
   slideTransition: 'linear',
   autoplayTimeout: 4000,
   autoplaySpeed: 4000,
-  autoWidth: true,
+  autoWidth: false,
   responsive: {
     0: {
-      items: 2
+      items: 1,
+      margin: 10
     },
     600: {
-      items: 3
+      items: 2,
+      margin: 15
     },
     1000: {
-      items: 4
+      items: 3,
+      margin: 20
+    },
+    1400: {
+      items: 4,
+      margin: 20
     }
   }
 })

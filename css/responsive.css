@@ -1637,6 +1637,64 @@
         line-height: 1.4;
     }
 
+    /* ============About Us Page Slider Mobile Fixes============ */
+    .about_us_section .about_slider {
+        margin: 30px 0;
+        padding: 0 15px;
+    }
+
+    .about_us_section #about_slider {
+        display: block !important;
+    }
+
+    .about_us_section #about_slider .owl-stage {
+        display: flex !important;
+    }
+
+    .about_us_section #about_slider .owl-item {
+        width: 100% !important;
+        flex-shrink: 0;
+    }
+
+    .about_us_section #about_slider .abt_slides {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .about_us_section #about_slider .abt_slides img {
+        height: 400px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 15px;
+        aspect-ratio: 3/4;
+    }
+
+    /* Ensure only one slide shows at a time on mobile */
+    .about_us_section #about_slider .owl-stage-outer {
+        overflow: hidden;
+    }
+
+    /* Add navigation dots for mobile */
+    .about_us_section #about_slider .owl-dots {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 8px;
+    }
+
+    .about_us_section #about_slider .owl-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ddd;
+        border: none;
+        cursor: pointer;
+    }
+
+    .about_us_section #about_slider .owl-dot.active {
+        background: var(--primery);
+    }
+
     .contact_inner {
         padding: 50px 20px;
     }
@@ -2449,6 +2507,16 @@
      /* Contact listing extra small mobile fixes */
      .contact_listing li {
          padding: 20px 15px;
+     }
+     
+           /* About Us slider extra small mobile fixes */
+      .about_us_section #about_slider .abt_slides img {
+          height: 350px;
+          aspect-ratio: 3/4;
+      }
+     
+     .about_us_section .about_slider {
+         padding: 0 10px;
      }
 }
 
