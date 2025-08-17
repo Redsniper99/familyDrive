@@ -1616,7 +1616,8 @@
         padding: 20px 15px;
     }
 
-    /* Hide 4th contact item on mobile */
+    /* Hide 3rd and 4th contact items on mobile - show only first 2 */
+    .contact_listing li:nth-child(3),
     .contact_listing li:nth-child(4) {
         display: none;
     }
