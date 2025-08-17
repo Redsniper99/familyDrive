@@ -1550,14 +1550,35 @@ iframe#youtubevideo {
 .review_section .positive_inner {
     padding: 50px 0 50px 0;
     border-bottom: 1px solid var(--dark-greay);
+    overflow: hidden;
 }
 
 .review_section .positive_inner .row {
     align-items: flex-start;
+    margin: 0;
+}
+
+.review_section .positive_inner .sidebar_text {
+    padding-right: 30px;
+}
+
+.review_section .positive_inner .review_side {
+    padding-left: 30px;
 }
 
 .review_section .positive_inner .row .sticky-top {
     top: 110px;
+    position: sticky;
+    height: fit-content;
+}
+
+/* Fix for mobile sticky positioning */
+@media screen and (max-width: 767px) {
+    .review_section .positive_inner .row .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+        height: auto;
+    }
 }
 
 .review_section .google_rating {

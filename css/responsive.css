@@ -526,6 +526,30 @@
     .about_us_section {
         padding-top: 120px;
     }
+    
+    /* Fix for About Us page section title text alignment on mobile */
+    .about_us_section .section_title {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    
+    .about_us_section .section_title h2 {
+        text-align: center !important;
+        font-size: 28px;
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
+    
+    .about_us_section .section_title p {
+        text-align: center !important;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .about_us_section .section_title .title_badge {
+        text-align: center !important;
+        margin: 0 auto 10px auto;
+    }
 
     .why_choose .why_choose_inner {
         padding: 50px 0;
@@ -1584,14 +1608,33 @@
         gap: 30px;
     }
 
-    .contact_listing .icon {
-        width: 70px;
-        height: 70px;
-        border-radius: 10px;
+    .contact_listing li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 15px;
     }
 
-    .contact_listing .icon img {
-        scale: 0.9;
+    /* Hide 4th contact item on mobile */
+    .contact_listing li:nth-child(4) {
+        display: none;
+    }
+
+    .contact_listing .icon {
+        margin: 0 auto 15px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact_listing .lable {
+        margin-bottom: 8px;
+    }
+
+    .contact_listing a {
+        word-break: break-word;
+        line-height: 1.4;
     }
 
     .contact_inner {
@@ -1600,10 +1643,6 @@
 
     .contact_section .section_title {
         margin-bottom: 30px;
-    }
-
-    .contact_listing .icon {
-        margin: 0 auto 20px auto;
     }
 
     .contact_section::before,
@@ -1739,5 +1778,852 @@
 
     .signup_section .form_block .form_side {
         padding: 30px;
+    }
+}
+
+/* Comprehensive Mobile Fixes for All Sections */
+@media screen and (max-width: 767px) {
+    /* General mobile fixes */
+    body {
+        text-align: center;
+    }
+    
+    .row_am {
+        padding: 30px 0;
+    }
+    
+    .section_title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .section_title h2 {
+        font-size: 28px;
+        line-height: 1.3;
+        letter-spacing: -1px;
+    }
+    
+    .section_title p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .section_title p br,
+    .section_title h2 br {
+        display: none;
+    }
+    
+    /* Header/Navbar fixes */
+    header {
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+    }
+    
+    .navbar {
+        padding: 0 15px !important;
+    }
+    
+    .navbar-brand img {
+        width: 80px !important;
+        transition: all 0.4s ease;
+    }
+    
+    header.fixed .navbar-brand img {
+        width: 60px !important;
+    }
+    
+    /* Banner section fixes */
+    .banner_section {
+        padding-top: 120px;
+        text-align: center;
+    }
+    
+    .banner_section .banner_text {
+        margin-top: 0;
+        padding: 0 20px;
+    }
+    
+    .banner_section .banner_text h1 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    
+    .banner_section .banner_text p {
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .banner_section .app_btn,
+    .banner_section .used_app {
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .banner_section .app_btn li {
+        margin: 0;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .banner_section .app_btn li a {
+        padding: 12px 20px;
+        width: 100%;
+    }
+    
+    .banner_section .app_btn li a img {
+        height: 25px;
+        width: auto;
+    }
+    
+    .hero_image img {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Interface section fixes */
+    .interface_section .screen_slider {
+        min-height: auto;
+    }
+    
+    .interface_section .owl-item .screen_frame_img img {
+        transform: scale(1);
+    }
+    
+    .interface_section .owl-dots {
+        margin-top: 30px;
+    }
+    
+    /* Task/App section fixes */
+    .task_app_section .task_block {
+        padding: 50px 30px;
+        position: relative;
+        top: -10px !important;
+        margin-bottom: 30px;
+    }
+    
+    .task_app_section .task_text .section_title {
+        text-align: center;
+    }
+    
+    .task_app_section .task_text .section_title h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+    
+    .task_app_section .task_text .section_title p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .task_app_section .task_img {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .task_app_section .task_img::before {
+        width: 255px;
+        height: 255px;
+    }
+    
+    .task_app_section .app_btn {
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .task_app_section .app_btn li {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .task_app_section .app_btn li a img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* About section fixes */
+    .about_section {
+        text-align: center;
+    }
+    
+    .about_section .row {
+        align-items: center;
+    }
+    
+    .about_section .row div:last-child {
+        text-align: center;
+    }
+    
+    .about_section .abtImg {
+        margin: 20px 0;
+    }
+    
+    .about_section .section_title {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .about_section .video_block {
+        margin: 30px auto;
+        width: 100%;
+    }
+    
+    .about_section .video_block .thumbnil {
+        width: 100%;
+    }
+    
+    .about_section::before,
+    .about_section::after {
+        height: 500px;
+        bottom: -230px;
+    }
+    
+    /* Service section fixes */
+    .service_section .service_text {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    
+    .service_section .service_text h2 {
+        font-size: 26px;
+        margin: 15px 0;
+    }
+    
+    .service_section .service_text h2 br {
+        display: none;
+    }
+    
+    .service_section .service_text p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .service_section .service_text .listing_block li .text {
+        text-align: left;
+    }
+    
+    .service_section .service_text .btn_block {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .service_section .service_text.right_side {
+        padding-left: 0;
+    }
+    
+    .service_blocks .inner_block {
+        padding: 40px 30px;
+        text-align: center;
+    }
+    
+    /* How it works section fixes */
+    .how_it_inner {
+        padding: 50px 0;
+    }
+    
+    .how_it_inner .section_title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .how_it_inner .steps_block {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .how_it_inner .steps_block .text .tag_text {
+        min-height: auto;
+    }
+    
+    .how_it_inner .steps_block.step_border::after {
+        display: none;
+    }
+    
+    .how_it_inner .steps_block .step {
+        margin-top: 0;
+    }
+    
+    .how_it_inner .steps_block .text {
+        margin-top: 15px;
+    }
+    
+    .how_it_inner .text-center .btn {
+        margin-top: 0;
+    }
+    
+    .how_it_inner .dotes_blue {
+        top: -35%;
+    }
+    
+    /* Review section fixes */
+    .review_section.page_ban {
+        padding-top: 100px;
+    }
+    
+    .review_section .google_rating {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .review_section .google_rating p {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .review_section .review_side.innerpage_block {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .review_section .review_side.innerpage_block .review_block {
+        width: 100%;
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .review_section .review_side .review_block .coustomer_info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .review_section .coustomer_info .avtar {
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .review_section .coustomer_info .avtar img {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .review_section .coustomer_info .avtar .text {
+        width: calc(100% - 80px);
+    }
+    
+    .review_section .coustomer_info .avtar .text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        line-height: 1.3;
+        text-align: left;
+    }
+    
+    .review_section .coustomer_info .avtar .text span {
+        font-size: 13px;
+        color: var(--dark-greay);
+        text-align: left;
+    }
+    
+    .review_section .coustomer_info .star {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+    
+    .review_section .coustomer_info .star span {
+        font-size: 16px;
+    }
+    
+    .review_section .review_block p {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .review_section .positive_inner.in_page {
+        padding: 0 15px 30px 15px;
+    }
+    
+    .review_section .positive_inner {
+        padding: 0 15px 50px 15px;
+    }
+    
+    /* Download app section fixes */
+    .download_app {
+        margin-bottom: 30px;
+    }
+    
+    .download_app .task_block {
+        padding: 50px 30px 0 30px;
+    }
+    
+    .download_app .task_block .section_title {
+        text-align: center;
+    }
+    
+    .download_app .task_text .section_title h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+    
+    .download_app .task_text .section_title p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .download_app .app_btn {
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .download_app .app_btn li {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .download_app .app_btn li a img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .download_app .frame_img {
+        text-align: center;
+    }
+    
+    .download_app .frame_img::before {
+        width: 80%;
+        right: 50px;
+    }
+    
+    /* Footer fixes */
+    footer {
+        margin-top: 0;
+        padding: 50px 0;
+        background-position: 50% 0%;
+    }
+    
+    footer .logo_side,
+    footer .download_side {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    footer .news_letter {
+        margin-bottom: 25px;
+    }
+    
+    footer .news_letter h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    footer .news_letter p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    footer .form-group {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    footer .form-group input {
+        padding: 12px 50px 12px 15px;
+        font-size: 14px;
+    }
+    
+    footer .form-group button {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px 12px;
+    }
+    
+    footer .note {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    footer .contact_info {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    footer .contact_info li {
+        margin: 0 10px;
+    }
+    
+    footer .contact_info li:not(:last-child)::after {
+        display: none;
+    }
+    
+    footer .social_media {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    footer .download_side h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    footer .download_side .app_btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    footer .download_side .app_btn li {
+        width: 100%;
+        max-width: 180px;
+    }
+    
+    footer .download_side .app_btn li a img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .footer_bottom {
+        padding: 20px 0;
+    }
+    
+    .footer_bottom .ft_inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer_bottom .copy_text p,
+    .footer_bottom .design_by p {
+        font-size: 14px;
+    }
+    
+    .footer_bottom .links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .footer_bottom .links li {
+        margin: 0;
+    }
+    
+    .footer_bottom .links li a {
+        font-size: 14px;
+    }
+    
+    /* Go top button fixes */
+    .go_top {
+        bottom: 30px;
+        z-index: 999;
+    }
+    
+    /* Text list section fixes */
+    .text_list_section .down_fix {
+        bottom: -15px;
+    }
+    
+    .text_list_section .owl-stage,
+    .text_list_section .owl-stage-outer,
+    .textFlow_list .owl-stage,
+    .textFlow_list .owl-stage-outer {
+        height: 35px;
+    }
+    
+    .text_block span {
+        font-size: 30px;
+    }
+    
+    /* Section title image fixes */
+    .section_title h2 img {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small mobile fixes */
+    .section_title h2 {
+        font-size: 24px;
+    }
+    
+    .section_title h2 img {
+        height: 22px;
+    }
+    
+    /* Banner section extra small fixes */
+    .banner_section .banner_text h1 {
+        font-size: 35px;
+    }
+    
+    .banner_section .banner_text {
+        padding: 0 20px;
+    }
+    
+    /* Review section extra small fixes */
+    .review_section .review_side.innerpage_block .review_block {
+        padding: 20px 15px;
+    }
+    
+    .review_section .coustomer_info .avtar img {
+        width: 50px;
+        min-width: 50px;
+    }
+    
+    .review_section .coustomer_info .avtar .text h3 {
+        font-size: 15px;
+    }
+    
+    .review_section .coustomer_info .avtar .text span {
+        font-size: 12px;
+    }
+    
+    .review_section .review_block p {
+        font-size: 13px;
+    }
+    
+    .review_section .google_rating p {
+        font-size: 13px;
+    }
+    
+    /* Download section extra small fixes */
+    .download_app .task_block {
+        padding: 30px 15px 0 15px;
+    }
+    
+    .download_app .task_text .section_title h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    
+    .download_app .task_text .section_title p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .download_app .frame_img::before {
+        width: 100%;
+        right: 0;
+    }
+    
+    /* Footer extra small fixes */
+    footer {
+        padding: 40px 0 20px 0;
+    }
+    
+    /* About section extra small fixes */
+    .about_section .video_block {
+        width: 100%;
+    }
+    
+    .about_section .video_block .thumbnil {
+        width: 100%;
+    }
+    
+    /* Blog detail extra small fixes */
+    .blog_detail_section {
+        padding: 120px 10px 50px 10px;
+    }
+    
+    .comment_section,
+    .comment_form_section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Sign up section extra small fixes */
+    .signup_section .form_block .form_side {
+        padding: 30px;
+    }
+    
+         /* Our value section extra small fixes */
+     .our_value_section .value_slider .value_block {
+         min-height: auto;
+     }
+     
+     /* Contact listing extra small mobile fixes */
+     .contact_listing li {
+         padding: 20px 15px;
+     }
+}
+
+/* Fix for About Us and Review sections scrolling issues */
+@media screen and (max-width: 767px) {
+    /* Review section fixes */
+    .review_section .positive_inner {
+        padding: 30px 0;
+    }
+    
+    .review_section .positive_inner .row {
+        flex-direction: column;
+    }
+    
+    .review_section .positive_inner .row .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 30px;
+    }
+    
+    .review_section .positive_inner .sidebar_text {
+        text-align: center;
+    }
+    
+    .review_section .positive_inner .sidebar_text .section_title {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    
+    .review_section .positive_inner .sidebar_text .section_title h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .review_section .positive_inner .sidebar_text .section_title h2 br {
+        display: none;
+    }
+    
+    .review_section .user_review {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    
+    .review_section .user_review p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    /* Review blocks mobile fixes */
+    .review_section .review_side {
+        margin-top: 0;
+    }
+    
+    .review_section .review_side .review_block {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .review_section .review_side .review_block .coustomer_info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .review_section .coustomer_info .avtar {
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .review_section .coustomer_info .avtar img {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .review_section .coustomer_info .avtar .text {
+        width: calc(100% - 80px);
+    }
+    
+    .review_section .coustomer_info .avtar .text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+        line-height: 1.3;
+        text-align: left;
+    }
+    
+    .review_section .coustomer_info .avtar .text span {
+        font-size: 13px;
+        color: var(--dark-greay);
+        text-align: left;
+    }
+    
+    .review_section .coustomer_info .star {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+    
+    .review_section .coustomer_info .star span {
+        font-size: 16px;
+    }
+    
+    .review_section .review_block p {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small mobile fixes for About Us and Review sections */
+    .review_section .positive_inner .sidebar_text .section_title h2 {
+        font-size: 24px;
+    }
+    
+    .review_section .user_review p {
+        font-size: 13px;
+    }
+    
+    .review_section .review_side .review_block {
+        padding: 20px 15px;
+    }
+    
+    .review_section .coustomer_info .avtar img {
+        width: 50px;
+        min-width: 50px;
+    }
+    
+    .review_section .coustomer_info .avtar .text h3 {
+        font-size: 15px;
+    }
+    
+    .review_section .coustomer_info .avtar .text span {
+        font-size: 12px;
+    }
+    
+    .review_section .review_block p {
+        font-size: 13px;
+    }
+}
+
+/* Additional mobile fixes for About Us and Review sections */
+@media screen and (max-width: 992px) {
+    .review_section .positive_inner .sidebar_text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .review_section .positive_inner .review_side {
+        padding-left: 0;
+    }
+    
+    .review_section .positive_inner .row .sticky-top {
+        position: relative !important;
+        top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .review_section .positive_inner {
+        padding: 30px 15px;
+    }
+    
+    .review_section .positive_inner .row {
+        margin: 0;
+    }
+    
+    .review_section .positive_inner .sidebar_text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .review_section .positive_inner .review_side {
+        padding-left: 0;
+        margin-top: 0;
     }
 }
